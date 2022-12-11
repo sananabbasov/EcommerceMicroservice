@@ -20,20 +20,7 @@ namespace CatalogService.Api.Controllers
         [Route("add")]
         public IActionResult AddCategory([FromBody]string categoryName)
         {
-            try
-            {
-                Category newCategory = new()
-                {
-                    CategoryName = categoryName
-                };
-                _categoryService.Add(newCategory);
-                return Ok();
-
-            }
-            catch (Exception)
-            {
-                return BadRequest();
-            }
+            return Ok();
         }
     }
 }

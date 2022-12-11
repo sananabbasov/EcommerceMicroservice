@@ -8,5 +8,6 @@ namespace CatalogService.Entities.Concrete
 {
     public class FeatureValue
     {
+        public string Value { get; set; }
     }
 }

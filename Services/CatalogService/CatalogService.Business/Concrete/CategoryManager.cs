@@ -1,11 +1,14 @@
 ﻿using CatalogService.Business.Abstract;
 using CatalogService.DataAccess.Abstract;
 using CatalogService.Entities.Concrete;
+using CatalogService.Entities.DTOs;
+using CorePackage.Helpers.Result.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CatalogService.Entities.DTOs.CategoryDTO;
 
 namespace CatalogService.Business.Concrete
 {
@@ -18,9 +21,14 @@ namespace CatalogService.Business.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void Add(Category category)
+        public IResult Add(CategoryAddDTO category)
         {
-            _categoryDal.Add(category);
+            throw new NotImplementedException();
+        }
+
+        public IDataResult<List<CategoryListDTO>> GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }
