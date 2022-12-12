@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CatalogService.Entities.DTOs.CategoryDTO;
+using static CatalogService.Entities.DTOs.ProductDTO;
 
 namespace CatalogService.Business.Abstract
 {
-    public interface ICategoryService
+    public interface IProductService
     {
-        IResult Add(CategoryAddDTO category);
-        IDataResult<List<CategoryListDTO>> GetAll();
+        IResult AddProduct(ProductDTO productAddDTO);
+        IDataResult<List<ProductListDTO>> GetHomeProducts();
     }
 }
