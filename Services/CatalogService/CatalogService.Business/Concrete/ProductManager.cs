@@ -53,5 +53,19 @@ namespace CatalogService.Business.Concrete
                 return new ErrorDataResult<List<ProductListDTO>>(e.Message);
             }
         }
+
+        public IDataResult<ProductGetByIdDTO> GetProductById(string id)
+        {
+            try
+            {
+                var data = _productDal.Get(x => x.Id == id);
+                var mapper = _mapper.Map<ProductGetByIdDTO>(data);
+                return new SuccessDataResult<ProductGetByIdDTO>(mapper);
+            }
+            catch (Exception e)
+            {
+                return new ErrorDataResult<ProductGetByIdDTO>(e.Message);
+            }
+        }
     }
 }

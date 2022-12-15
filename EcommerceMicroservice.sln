@@ -33,11 +33,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EB9AEA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorePackage", "Shared\CorePackage\CorePackage.csproj", "{E472B507-1FF1-43B8-AF6A-1BF9E17DA755}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.DataAccess", "Services\CatalogService\CatalogService.DataAccess\CatalogService.DataAccess.csproj", "{DD52342E-85F2-4C60-ADB5-7D2C52E18899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.DataAccess", "Services\CatalogService\CatalogService.DataAccess\CatalogService.DataAccess.csproj", "{DD52342E-85F2-4C60-ADB5-7D2C52E18899}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Business", "Services\CatalogService\CatalogService.Business\CatalogService.Business.csproj", "{2988AA09-6B9A-476D-BFFF-5E8DF3268DEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Business", "Services\CatalogService\CatalogService.Business\CatalogService.Business.csproj", "{2988AA09-6B9A-476D-BFFF-5E8DF3268DEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Entities", "Services\CatalogService\CatalogService.Entities\CatalogService.Entities.csproj", "{C2C2BDF0-D027-4286-AC0C-04228E490697}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Entities", "Services\CatalogService\CatalogService.Entities\CatalogService.Entities.csproj", "{C2C2BDF0-D027-4286-AC0C-04228E490697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.DataAccess", "Services\BasketService\BasketService.DataAccess\BasketService.DataAccess.csproj", "{7B1C03BD-50B7-4207-B2C1-83F712A92803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Entities", "Services\BasketService\BasketService.Entities\BasketService.Entities.csproj", "{56292089-B240-4AB6-9C1C-FBC8082FB911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Business", "Services\BasketService\BasketService.Business\BasketService.Business.csproj", "{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +91,18 @@ Global
 		{C2C2BDF0-D027-4286-AC0C-04228E490697}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C2BDF0-D027-4286-AC0C-04228E490697}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C2BDF0-D027-4286-AC0C-04228E490697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1C03BD-50B7-4207-B2C1-83F712A92803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1C03BD-50B7-4207-B2C1-83F712A92803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1C03BD-50B7-4207-B2C1-83F712A92803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1C03BD-50B7-4207-B2C1-83F712A92803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56292089-B240-4AB6-9C1C-FBC8082FB911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56292089-B240-4AB6-9C1C-FBC8082FB911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56292089-B240-4AB6-9C1C-FBC8082FB911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56292089-B240-4AB6-9C1C-FBC8082FB911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +123,9 @@ Global
 		{DD52342E-85F2-4C60-ADB5-7D2C52E18899} = {8F91E7F3-E269-4944-97C5-5731346A756C}
 		{2988AA09-6B9A-476D-BFFF-5E8DF3268DEB} = {8F91E7F3-E269-4944-97C5-5731346A756C}
 		{C2C2BDF0-D027-4286-AC0C-04228E490697} = {8F91E7F3-E269-4944-97C5-5731346A756C}
+		{7B1C03BD-50B7-4207-B2C1-83F712A92803} = {893056E2-457D-4121-8D52-24C9CD64FBDC}
+		{56292089-B240-4AB6-9C1C-FBC8082FB911} = {893056E2-457D-4121-8D52-24C9CD64FBDC}
+		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901} = {893056E2-457D-4121-8D52-24C9CD64FBDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B14014A7-B12B-4A1B-B3D7-FB445B1C5CE8}

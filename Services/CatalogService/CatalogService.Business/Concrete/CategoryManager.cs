@@ -50,19 +50,12 @@ namespace CatalogService.Business.Concrete
             {
                 var data = _categoryDal.GetAll();
                 var subCategories = _subCategoryService.GetAllSubCategories();
-
                 var mapData = _mapper.Map<List<CategoryListDTO>>(data);
-
-
                 List<CategoryListDTO> result = new();
-
                 foreach (var category in data)
                 {
                     List<string> subsList = new();
-
                     var res = subCategories.Data.Where(x => category.SubCategoryId.Contains(x.Id)).ToList();
-
-
 
                     CategoryListDTO newList = new()
                     {
@@ -72,15 +65,10 @@ namespace CatalogService.Business.Concrete
 
                     result.Add(newList);
                 }
-              
-
-
-
                 return new SuccessDataResult<List<CategoryListDTO>>(result, "Data geldi");
             }
             catch (Exception e)
             {
-
                 return new ErrorDataResult<List<CategoryListDTO>>(e.Message);
             }
         }
