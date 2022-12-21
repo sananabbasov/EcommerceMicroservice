@@ -39,11 +39,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Business", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Entities", "Services\CatalogService\CatalogService.Entities\CatalogService.Entities.csproj", "{C2C2BDF0-D027-4286-AC0C-04228E490697}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.DataAccess", "Services\BasketService\BasketService.DataAccess\BasketService.DataAccess.csproj", "{7B1C03BD-50B7-4207-B2C1-83F712A92803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.DataAccess", "Services\BasketService\BasketService.DataAccess\BasketService.DataAccess.csproj", "{7B1C03BD-50B7-4207-B2C1-83F712A92803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Entities", "Services\BasketService\BasketService.Entities\BasketService.Entities.csproj", "{56292089-B240-4AB6-9C1C-FBC8082FB911}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Entities", "Services\BasketService\BasketService.Entities\BasketService.Entities.csproj", "{56292089-B240-4AB6-9C1C-FBC8082FB911}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Business", "Services\BasketService\BasketService.Business\BasketService.Business.csproj", "{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Business", "Services\BasketService\BasketService.Business\BasketService.Business.csproj", "{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.DataAccess", "Services\IdentityService\IdentityService.DataAccess\IdentityService.DataAccess.csproj", "{8386279F-6D86-4FE4-8F73-53CCF835D508}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Business", "Services\IdentityService\IdentityService.Business\IdentityService.Business.csproj", "{C8BF8FD8-DEBC-47D6-ADE3-FC64E3064E1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Entities", "Services\IdentityService\IdentityService.Entities\IdentityService.Entities.csproj", "{F7B8C603-6AC5-4BA0-BE02-75C905CDAC02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{719C23F4-7BDD-4F71-9117-EF905719513D}"
+	ProjectSection(SolutionItems) = preProject
+		Ports.txt = Ports.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +114,18 @@ Global
 		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8386279F-6D86-4FE4-8F73-53CCF835D508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8386279F-6D86-4FE4-8F73-53CCF835D508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8386279F-6D86-4FE4-8F73-53CCF835D508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8386279F-6D86-4FE4-8F73-53CCF835D508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8BF8FD8-DEBC-47D6-ADE3-FC64E3064E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BF8FD8-DEBC-47D6-ADE3-FC64E3064E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BF8FD8-DEBC-47D6-ADE3-FC64E3064E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BF8FD8-DEBC-47D6-ADE3-FC64E3064E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B8C603-6AC5-4BA0-BE02-75C905CDAC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B8C603-6AC5-4BA0-BE02-75C905CDAC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B8C603-6AC5-4BA0-BE02-75C905CDAC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B8C603-6AC5-4BA0-BE02-75C905CDAC02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +149,9 @@ Global
 		{7B1C03BD-50B7-4207-B2C1-83F712A92803} = {893056E2-457D-4121-8D52-24C9CD64FBDC}
 		{56292089-B240-4AB6-9C1C-FBC8082FB911} = {893056E2-457D-4121-8D52-24C9CD64FBDC}
 		{88CF3B4A-CB25-4C07-AFCB-0DDAE4D3D901} = {893056E2-457D-4121-8D52-24C9CD64FBDC}
+		{8386279F-6D86-4FE4-8F73-53CCF835D508} = {16670BC2-CD3B-48AF-8AE0-E9A4F81189C4}
+		{C8BF8FD8-DEBC-47D6-ADE3-FC64E3064E1C} = {16670BC2-CD3B-48AF-8AE0-E9A4F81189C4}
+		{F7B8C603-6AC5-4BA0-BE02-75C905CDAC02} = {16670BC2-CD3B-48AF-8AE0-E9A4F81189C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B14014A7-B12B-4A1B-B3D7-FB445B1C5CE8}
