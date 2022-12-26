@@ -21,6 +21,13 @@ namespace BasketService.Api.Controllers
         }
 
 
+        [HttpPost("addcart")]
+        public IActionResult AddCart(BasketItemDTO basketItem)
+        {
+            return Ok();
+        }
+
+
         [HttpPost("addtocart")]
         public IActionResult AddToCard(List<BasketItemDTO> basketItem)
         {
