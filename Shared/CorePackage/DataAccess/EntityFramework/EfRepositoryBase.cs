@@ -46,5 +46,10 @@ namespace CorePackage.DataAccess.EntityFramework
             updateEntity.State = EntityState.Modified;
             context.SaveChanges();
         }
+
+        public void UpdateById(Expression<Func<TEntity, bool>> filter, TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

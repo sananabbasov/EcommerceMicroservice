@@ -16,6 +16,9 @@ namespace CatalogService.DataAccess.Concrete.MongoDb
         {
         }
 
-
+        public void UpdateProduct(string id, Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

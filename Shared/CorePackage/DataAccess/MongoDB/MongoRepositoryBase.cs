@@ -54,5 +54,9 @@ namespace CorePackage.DataAccess.MongoDB
         {
             throw new NotImplementedException();
         }
+        public async void UpdateById(Expression<Func<TEntity, bool>> filter, TEntity entity)
+        {
+            await _collection.FindOneAndReplaceAsync(filter, entity);
+        }
     }
 }

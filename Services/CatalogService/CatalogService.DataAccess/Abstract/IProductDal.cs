@@ -10,5 +10,6 @@ namespace CatalogService.DataAccess.Abstract
 {
     public interface IProductDal : IRepositoryBase<Product>
     {
+        void UpdateProduct(string id, Product product);
     }
 }

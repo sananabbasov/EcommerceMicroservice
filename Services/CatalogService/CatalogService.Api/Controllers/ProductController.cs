@@ -38,6 +38,17 @@ namespace CatalogService.Api.Controllers
             return Ok(addData.Message);
         }
 
+        [HttpPut("update/{id}")]
+        public IActionResult Update(string id,ProductDTO productDTO)
+        {
+            var addData = _productService.UpdateProduct(id,productDTO);
+            if (!addData.Success)
+            {
+                return BadRequest(addData.Message);
+            }
+            return Ok(addData.Message);
+        }
+
         [HttpGet("getbyid/{productId}")]
         public IActionResult GetById(string productId)
         {

@@ -46,7 +46,7 @@ namespace CatalogService.Business.Concrete
             {
                 var data = _productDal.GetAll();
                 var result = _mapper.Map<List<ProductListDTO>>(data);
-                return new SuccessDataResult<List<ProductListDTO>>(result,"Data geldi.");
+                return new SuccessDataResult<List<ProductListDTO>>(result, "Data geldi.");
             }
             catch (Exception e)
             {
@@ -65,6 +65,21 @@ namespace CatalogService.Business.Concrete
             catch (Exception e)
             {
                 return new ErrorDataResult<ProductGetByIdDTO>(e.Message);
+            }
+        }
+
+        public IDataResult<ProductDTO> UpdateProduct(string id, ProductDTO productDTO)
+        {
+            try
+            {
+                var mapper = _mapper.Map<Product>(productDTO);
+                mapper.Id = id;
+                _productDal.UpdateById(x => x.Id == id, mapper);
+                return new SuccessDataResult<ProductDTO>(productDTO);
+            }
+            catch (Exception e)
+            {
+                return new ErrorDataResult<ProductDTO>(e.Message);
             }
         }
     }
