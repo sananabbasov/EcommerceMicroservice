@@ -39,9 +39,9 @@ namespace CatalogService.Api.Controllers
         }
 
         [HttpPut("update/{id}")]
-        public IActionResult Update(string id,ProductDTO productDTO)
+        public async Task<IActionResult> Update(string id,ProductDTO productDTO)
         {
-            var addData = _productService.UpdateProduct(id,productDTO);
+            var addData = await _productService.UpdateProduct(id,productDTO);
             if (!addData.Success)
             {
                 return BadRequest(addData.Message);

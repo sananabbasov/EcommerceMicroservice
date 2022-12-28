@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.0.9" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\CorePackage\CorePackage.csproj" />
+    <ProjectReference Include="..\..\..\Shared\EventBusMessages\EventBusMessages.csproj" />
     <ProjectReference Include="..\BasketService.DataAccess\BasketService.DataAccess.csproj" />
     <ProjectReference Include="..\BasketService.Entities\BasketService.Entities.csproj" />
   </ItemGroup>

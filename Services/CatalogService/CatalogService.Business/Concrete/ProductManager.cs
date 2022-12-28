@@ -6,6 +6,8 @@ using CatalogService.Entities.DTOs;
 using CorePackage.Helpers.Result.Abstract;
 using CorePackage.Helpers.Result.Concrete.ErrorResults;
 using CorePackage.Helpers.Result.Concrete.SuccessResults;
+using EventBusMessages.Messages;
+using MassTransit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +21,12 @@ namespace CatalogService.Business.Concrete
     {
         private readonly IProductDal _productDal;
         private readonly IMapper _mapper;
-
-        public ProductManager(IProductDal productDal, IMapper mapper)
+        private readonly IPublishEndpoint _publishEndpoint;
+        public ProductManager(IProductDal productDal, IMapper mapper, IPublishEndpoint publishEndpoint)
         {
             _productDal = productDal;
             _mapper = mapper;
+            _publishEndpoint = publishEndpoint;
         }
 
         public IResult AddProduct(ProductDTO productAddDTO)
@@ -68,13 +71,14 @@ namespace CatalogService.Business.Concrete
             }
         }
 
-        public IDataResult<ProductDTO> UpdateProduct(string id, ProductDTO productDTO)
+        public async Task<IDataResult<ProductDTO>> UpdateProduct(string id, ProductDTO productDTO)
         {
             try
             {
                 var mapper = _mapper.Map<Product>(productDTO);
                 mapper.Id = id;
                 _productDal.UpdateById(x => x.Id == id, mapper);
+                await _publishEndpoint.Publish<ProductNameChangedEvent>(new ProductNameChangedEvent { ProductId = productDTO.Id, UpdatedName = productDTO.Name });
                 return new SuccessDataResult<ProductDTO>(productDTO);
             }
             catch (Exception e)

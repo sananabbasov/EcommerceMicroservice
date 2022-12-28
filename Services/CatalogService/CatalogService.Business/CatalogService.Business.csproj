@@ -8,9 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="MassTransit" Version="8.0.9" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.9" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\EventBusMessages\EventBusMessages.csproj" />
     <ProjectReference Include="..\CatalogService.DataAccess\CatalogService.DataAccess.csproj" />
     <ProjectReference Include="..\CatalogService.Entities\CatalogService.Entities.csproj" />
   </ItemGroup>

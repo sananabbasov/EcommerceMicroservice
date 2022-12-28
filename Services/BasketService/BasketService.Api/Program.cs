@@ -1,11 +1,34 @@
 using BasketService.Business.Abstract;
 using BasketService.Business.Concrete;
+using BasketService.Business.Consumers;
 using BasketService.DataAccess.Abstract;
 using BasketService.DataAccess.Concrete.EntityFramework;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<ProductNameChangedEventConsumer>();
+    // Default Port : 5672
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost", "/", host =>
+        {
+            host.Username("guest");
+            host.Password("guest");
+        });
+
+        
+        cfg.ReceiveEndpoint("product-name-changed-event-order-service", e =>
+        {
+            e.ConfigureConsumer<ProductNameChangedEventConsumer>(context);
+        });
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
